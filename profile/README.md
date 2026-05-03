@@ -1,3 +1,5 @@
+![AnchorageLabs banner](anchoragedark.JPG)
+
 # AnchorageLabs
 
 AnchorageLabs is a technology lab focused on building precise, durable, and useful software solutions.
