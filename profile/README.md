@@ -4,7 +4,11 @@ AnchorageLabs is a technology lab focused on building precise, durable, and usef
 
 We work on tools and infrastructure for developers, automation, and modern software teams. Our projects are designed to be practical first: clear architecture, strong operational foundations, and a bias toward systems that can be understood, tested, and improved over time.
 
-![AnchorageLabs banner](anchoragedark.JPG)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="anchoragedark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="anchoragelight.svg">
+  <img alt="AnchorageLabs banner" src="anchoragelight.svg">
+</picture>
 
 ## Principles
 
