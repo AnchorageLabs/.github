@@ -20,7 +20,7 @@ An open-core stack for end-to-end software automation: a wire protocol for
 task envelopes, a TypeScript SDK, a reference CLI runner, and reference
 agents (issue reading, planning, coding, review, merge, deploy) — all
 Apache-2.0. The proprietary orchestrator ("the mainframe") sits above that
-protocol, sequencing agents into durable Temporal workflows: issue → code,
+protocol, sequencing agents into durable workflows: issue → code,
 issue → merge, issue → deploy, and equivalents starting from a Notion task.
 
 ```mermaid
@@ -36,13 +36,11 @@ flowchart LR
     subgraph priv["anchorage-orchestrator (private)"]
         direction TB
         Server["HTTP API"]
-        Temporal["Temporal workflows"]
         Worker["Worker"]
     end
 
-    Trigger["GitHub issue / Notion task"] --> Server
-    Server --> Temporal
-    Temporal --> Worker
+    Trigger["GitHub issue / User Instruction"] --> Server
+    Server --> Worker
     Worker -- "invokes via protocol" --> Runner
     Runner --> Agents
     Agents --> Outcome["PR opened → CI watched →\nreviewed → merged → deployed"]
