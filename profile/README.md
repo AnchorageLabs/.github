@@ -114,8 +114,6 @@ flowchart LR
 
 AnchorageLabs is a personal venture by Valentin Torassa and Sol Soletti.
 
-Both founders also work at Teramot, but AnchorageLabs is independent. AnchorageLabs work uses personal accounts, personal emails, and AnchorageLabs-owned infrastructure.
-
 ## Contact
 
 For now, AnchorageLabs is founder-led and privately operated.
