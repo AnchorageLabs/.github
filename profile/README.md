@@ -1,14 +1,27 @@
-# AnchorageLabs
-
-AnchorageLabs builds infrastructure for software automation: coding agents that
-plan, write, review, and ship code, and the structural context those agents
-need to do it without re-discovering a repository from scratch every time.
+<div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="anchoragedark.svg">
   <source media="(prefers-color-scheme: light)" srcset="anchoragelight.svg">
-  <img alt="AnchorageLabs banner" src="anchoragelight.svg">
+  <img alt="Anchorage Labs" src="anchoragelight.svg" width="440">
 </picture>
+
+### The state layer of AI software engineering
+
+A deterministic map of every repository, and a runtime that takes an issue to a merged, deployed change.
+
+<p>
+  <img alt="Protocol: Apache-2.0" src="https://img.shields.io/badge/protocol-Apache--2.0-2ee9ff?style=for-the-badge&labelColor=0c0e13">
+  <img alt="Cartographer: private beta" src="https://img.shields.io/badge/Cartographer-private%20beta-4cc9ff?style=for-the-badge&labelColor=0c0e13">
+  <img alt="Agents: MCP + A2A" src="https://img.shields.io/badge/agents-MCP%20%C2%B7%20A2A-a78bff?style=for-the-badge&labelColor=0c0e13">
+  <img alt="Built on AWS" src="https://img.shields.io/badge/built%20on-AWS-ff9900?style=for-the-badge&labelColor=0c0e13">
+</p>
+
+</div>
+
+Anchorage Labs builds infrastructure for software automation: coding agents that
+plan, write, review, and ship code, and the structural context those agents
+need to do it without re-discovering a repository from scratch every time.
 
 ## What we build
 
@@ -74,6 +87,23 @@ flowchart LR
     Graph -- "pull" --> Other["Every other repo / agent in the org"]
 ```
 
+Cartographer is currently in **private beta — invite-only**. Invited members get a
+one-command CLI install and a full developer setup guide:
+
+```bash
+# macOS · Linux · Git Bash
+curl -fsSL https://api.anchoragelabs.dev/cli/install.sh | sh
+
+# Windows PowerShell
+irm https://api.anchoragelabs.dev/cli/install.ps1 | iex
+```
+
+**Works with your agents.** One token wires Cartographer's graph into the tools
+your team already uses — over MCP, with a stdio bridge for anything else:
+
+| Claude Code | Cursor | Codex | Gemini CLI | GitHub Copilot | Windsurf | Zed |
+| :---------: | :----: | :---: | :--------: | :------------: | :------: | :-: |
+
 ### How they fit together
 
 Cartographer's compact context digest is injected directly into Anchorage
@@ -86,6 +116,12 @@ flowchart LR
     Envelope --> Runner["anchorage-runner"]
     Runner --> Agent["Reference agent"]
 ```
+
+### Under the hood
+
+TypeScript · Node 22 · tree-sitter · SQLite · PostgreSQL · MCP / A2A ·
+AWS (CDK · Bedrock · ECS Fargate · RDS · S3) — grounded in facts, provisioned as
+code, and inspectable end to end.
 
 ## Principles
 
